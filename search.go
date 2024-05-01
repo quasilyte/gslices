@@ -1,12 +1,12 @@
 package gslices
 
-func Contains[T comparable](s []T, v T) bool {
-	return Index(s, v) >= 0
+func Contains[T comparable](s []T, x T) bool {
+	return Index(s, x) >= 0
 }
 
-func Index[T comparable](s []T, v T) int {
+func Index[T comparable](s []T, x T) int {
 	for i := range s {
-		if v == s[i] {
+		if x == s[i] {
 			return i
 		}
 	}
