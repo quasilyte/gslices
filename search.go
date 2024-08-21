@@ -21,3 +21,12 @@ func IndexFunc[T comparable](s []T, f func(x T) bool) int {
 	}
 	return -1
 }
+
+func Find[T comparable](s []T, x T) (result T) {
+	for i := range s {
+		if x == s[i] {
+			return s[i]
+		}
+	}
+	return result
+}
