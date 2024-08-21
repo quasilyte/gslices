@@ -30,3 +30,12 @@ func Find[T comparable](s []T, x T) (result T) {
 	}
 	return result
 }
+
+func FindFunc[T comparable](s []T, f func(x T) bool) (result T) {
+	for i := range s {
+		if f(s[i]) {
+			return s[i]
+		}
+	}
+	return result
+}
