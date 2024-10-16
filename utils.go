@@ -10,6 +10,9 @@ func Clone[T any](s []T) []T {
 
 func Transfer[T comparable](from, to *[]T, x T) {
 	i := Index(*from, x)
+	if i == -1 {
+		panic("transfering a non-existing object")
+	}
 	DeleteAt(*from, i)
 	*to = append(*to, x)
 }
