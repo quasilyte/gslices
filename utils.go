@@ -13,6 +13,6 @@ func Transfer[T comparable](from, to *[]T, x T) {
 	if i == -1 {
 		panic("transfering a non-existing object")
 	}
-	DeleteAt(*from, i)
+	DeleteAt(from, i)
 	*to = append(*to, x)
 }
