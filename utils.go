@@ -16,3 +16,7 @@ func Transfer[T comparable](from, to *[]T, x T) {
 	DeleteAt(from, i)
 	*to = append(*to, x)
 }
+
+func Last[T any](s []T) T {
+	return s[len(s)-1]
+}
