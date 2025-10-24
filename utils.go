@@ -20,3 +20,7 @@ func Transfer[T comparable](from, to *[]T, x T) {
 func Last[T any](s []T) T {
 	return s[len(s)-1]
 }
+
+func Prepend[T any](s *[]T, x T) {
+	*s = append([]T{x}, *s...)
+}
